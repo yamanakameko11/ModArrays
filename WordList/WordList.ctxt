@@ -6,4 +6,6 @@ comment2.params=len
 comment2.target=int\ numWordsOfLength(int)
 comment3.params=len
 comment3.target=void\ removeWordsOfLength(int)
-numComments=4
+comment4.params=len
+comment4.target=void\ removeWOL(int)
+numComments=5

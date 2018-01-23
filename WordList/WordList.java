@@ -19,24 +19,34 @@ public class WordList
         myList.add("dog");
     }
 
-    public int numWordsOfLength(int len){
+    public int numWordsOfLength(int len){ // returns number of words exactly len characters long
         int n = 0;
         for(String i:myList){
             if (i.length() == len){
-                n += 1;
+                n++;
             }
         }
         return n;
     }
-    
-    
-    public void removeWordsOfLength(int len){
 
+    public void removeWordsOfLength(int len){ // remove all str of length len from arraylist (DESTROYS PERSISTENT DATA)
+        ArrayList<String> tempList = new ArrayList<String>();
         for(String i:myList){
             if(i.length() == len){
-                myList.add(i);
+                tempList.add(i);
             }
         }
+        myList.removeAll(tempList);
     }
     
+    public void removeWOL(int len){ // print list of str in myList of len length (DOESN'T DESTROY PERSISTENT DATA)
+        ArrayList<String> tempList = new ArrayList<String>();
+        for(String i:myList){
+            if(i.length() != len){
+                tempList.add(i);
+            }
+        }
+        System.out.println(tempList.toString());
+    }
+
 }
